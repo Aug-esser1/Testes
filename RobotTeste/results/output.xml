@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-27T14:28:14.806238" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotTeste" source="C:\Users\augus\Downloads\RobotTeste">
+<suite id="s1-s1" name="Entrada" source="C:\Users\augus\Downloads\RobotTeste\entrada.robot">
+<test id="s1-s1-t1" name="Scenario 1: criar entrada" line="5">
+<kw name="entrar no site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-27T14:28:15.699960" level="INFO">Opening browser 'chrome' to base url 'https://dev-finance.netlify.app/#'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-27T14:28:15.698910" elapsed="4.548890"/>
+</kw>
+<status status="PASS" start="2025-01-27T14:28:15.695316" elapsed="4.552953"/>
+</kw>
+<kw name="click Nova transação">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${btn_nv_trns}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-27T14:28:20.250717" elapsed="0.077570"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-27T14:28:20.329701" level="INFO">Clicking element '//*[@id="transaction"]/a'.</msg>
+<arg>${btn_nv_trns}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T14:28:20.328758" elapsed="0.227979"/>
+</kw>
+<status status="PASS" start="2025-01-27T14:28:20.249192" elapsed="0.308538"/>
+</kw>
+<kw name="preencha os campos">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-27T14:28:20.561532" level="INFO">Typing text 'Freela' into text field '//input[@id="description"]'.</msg>
+<arg>${descricao}</arg>
+<arg>${vl_desc}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T14:28:20.560687" elapsed="0.301646"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-27T14:28:20.864364" level="INFO">Typing text '100' into text field '//input[@id="amount"]'.</msg>
+<arg>${valor}</arg>
+<arg>${vl_valor}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T14:28:20.863020" elapsed="0.211182"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-27T14:28:21.075570" level="INFO">Typing text '2024-09-10' into text field '//input[@id="date"]'.</msg>
+<arg>${data}</arg>
+<arg>${vl_data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T14:28:21.074656" elapsed="0.218493"/>
+</kw>
+<status status="PASS" start="2025-01-27T14:28:20.559282" elapsed="0.734609"/>
+</kw>
+<kw name="click em salvar">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-27T14:28:21.296738" level="INFO">Clicking element '//*[@id="form"]/form/div[4]/button'.</msg>
+<arg>${btn_salvar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T14:28:21.295977" elapsed="0.173688"/>
+</kw>
+<status status="PASS" start="2025-01-27T14:28:21.294859" elapsed="0.175410"/>
+</kw>
+<kw name="verificar corretamente">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-27T14:28:21.537941" level="INFO">Element '//*[@id="data-table"]/tbody/tr/td[text()="Freela"]' is displayed.</msg>
+<arg>//*[@id="data-table"]/tbody/tr/td[text()="${vl_desc}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-27T14:28:21.474726" elapsed="0.063823"/>
+</kw>
+<status status="PASS" start="2025-01-27T14:28:21.472756" elapsed="0.066189"/>
+</kw>
+<status status="PASS" start="2025-01-27T14:28:15.690959" elapsed="5.849161"/>
+</test>
+<status status="PASS" start="2025-01-27T14:28:14.875778" elapsed="6.668162"/>
+</suite>
+<status status="PASS" start="2025-01-27T14:28:14.817308" elapsed="6.732083"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="RobotTeste">RobotTeste</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Entrada">RobotTeste.Entrada</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
