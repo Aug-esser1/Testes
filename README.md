@@ -1,3 +1,6 @@
+Instalar visual studio code
+https://code.visualstudio.com/download
+
 Cypress                                    
 Você vai precisar das seguintes ferramentas e tecnologias:                                
 https://nodejs.org. - NODE
